@@ -24,13 +24,13 @@ const Farms = () => {
     { id: "4", name: "Farm 4", link: "" },
   ];
   return (
-    <section className="flex flex-col items-center max-w-full h-screen bg-slate-400">
-      <header className="w-full text-center p-8">
+    <section className="flex flex-col items-center max-w-full h-screen bg-radial-custom" id="farms">
+      <header className="w-full text-center  bg-red-400">
         <h1 className="text-[100px] font-bold">Farms</h1>
       </header>
 
-      <div className="flex justify-center w-full h-full overflow-y-auto">
-        {/* <Board farms={farms}></Board> */}
+      <div className="flex justify-center h-full overflow-y-auto m-14 w-5/6 p-6 bg-white/50 brightness-60 backdrop-blur-sm rounded-3xl">
+        <Board farms={farms}></Board> 
       </div>
     </section>
   );
