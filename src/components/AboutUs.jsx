@@ -91,7 +91,6 @@ const AboutUs = () => {
             Software Team
           </div>
         </div>
-        ∏
       </div>
     </>
   );

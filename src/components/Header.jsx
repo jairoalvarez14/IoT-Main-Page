@@ -1,19 +1,5 @@
-<<<<<<< HEAD
 import { useEffect } from "react";
 
-=======
-<<<<<<< HEAD
-const Header = () => {
-  return (
-    <div>Header</div>
-  )
-}
-
-export default Header
-=======
-import { useEffect } from "react";
-
->>>>>>> 4b3cd09 (Initial commit)
 const Header = () => {
   const navLinks = [
     {
@@ -42,10 +28,6 @@ const Header = () => {
     };
 
     window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
   }, []);
 
   return (
@@ -68,7 +50,3 @@ const Header = () => {
 };
 
 export default Header;
-<<<<<<< HEAD
-=======
->>>>>>> 1020b7b (Initial commit)
->>>>>>> 4b3cd09 (Initial commit)
