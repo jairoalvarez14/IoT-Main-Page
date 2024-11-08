@@ -14,7 +14,7 @@ const DisplayedFarm = ({ children, index }) => {
       {children}
     </div>
   );
-};
+}; //TODO I need to complete this before sunday
 
 const Farms = () => {
   const farms = [
