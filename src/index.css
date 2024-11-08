@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* FONTS */
 /* Edu Australian, Bebas Neue, Source Code Pro */
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap");
@@ -5,7 +6,25 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+=======
+<<<<<<< HEAD
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+=======
+/* FONTS */
+/* Edu Australian, Bebas Neue, Source Code Pro */
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+>>>>>>> 4b3cd09 (Initial commit)
 
 body {
   background: #eaeaea;
 }
+<<<<<<< HEAD
+=======
+>>>>>>> 1020b7b (Initial commit)
+>>>>>>> 4b3cd09 (Initial commit)
