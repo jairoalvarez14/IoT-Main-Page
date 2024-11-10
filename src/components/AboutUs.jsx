@@ -1,3 +1,10 @@
+// React Icons
+import {
+  HiChevronDoubleUp,
+  HiChevronDoubleDown,
+  HiOutlineChevronDoubleUp,
+} from "react-icons/hi";
+
 // SVG logos
 import {
   MongoDBSVG,
@@ -17,11 +24,13 @@ const svgs = [
   { name: "TailwindCSS", svg: TailwindSVG },
 ];
 
-const softwareTeam = ["Jairo", "Héctor"];
-const hardwareTeam = ["Erany", "Josue", "Oziel"];
+const softwareTeam = ["Jairo Álvarez", "Héctor Torres"];
+const hardwareTeam = ["Erany Fon Bon", "Josué Morales", "Oziel Venegas"];
 
 const photos = [
+  "https://images.pexels.com/photos/335464/pexels-photo-335464.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
   "https://images.pexels.com/photos/2387418/pexels-photo-2387418.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+  "https://images.pexels.com/photos/335464/pexels-photo-335464.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
   "https://images.pexels.com/photos/2387418/pexels-photo-2387418.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
 ];
 
@@ -30,18 +39,30 @@ const AboutUs = () => {
     <>
       <div className="flex h-screen w-full flex-col items-center justify-center p-6">
         <div className="flex h-[20%] flex-col items-center justify-center gap-4 text-center">
-          <h2 className="text-[100px] font-bold">About us!</h2>
+          <h2 className="text-[70px] font-bold">About us!</h2>
         </div>
         <div className="grid grid-cols-5 grid-rows-4 gap-4 h-[80%] w-full">
           <div className="col-span-3 row-span-4 rounded-3xl flex justify-center items-center">
             {/* Info container */}
             <div className="grid grid-cols-6 grid-rows-4 gap-4 h-full w-full flex-col">
               {/* Title */}
-              <div className="col-span-6 row-span-1 bg-white rounded-3xl flex justify-center items-center text-[100px] font-Edu_Australia">
-                React
+              <div
+                className="col-span-6 row-span-1 rounded-3xl border-[5px] border-black border-dashed flex justify-center items-center text-[32px] font-Edu_Australia
+              xl:text-[80px]
+              lg:text-[60px]
+              md:text-[50px]
+              sm:text-[40px]"
+              >
+                MongoDB
               </div>
               {/* Info */}
-              <div className="col-span-6 row-span-2 bg-white rounded-3xl flex justify-center items-center font-Source_Code">
+              <div
+                className="col-span-6 row-span-2 rounded-3xl flex justify-center items-center font-Source_Code border-black border-dashed border-[3px] p-8 text-[8px]
+              xl:text-[14px]
+              lg:text-[14px]
+              md:text-[12px]
+              sm:text-[11px]"
+              >
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta
                 laudantium quas, eveniet reprehenderit ipsam quibusdam eius
                 tenetur vitae saepe nisi placeat adipisci explicabo ullam
@@ -50,61 +71,132 @@ const AboutUs = () => {
                 eum, sit sapiente obcaecati commodi optio odio sed molestias
                 unde necessitatibus voluptatum perspiciatis quia, ratione,
                 voluptate tenetur aperiam laboriosam numquam repudiandae ullam.
-                Dignissimos dolore quibusdam voluptas in dolores corporis veniam
-                provident autem ut ipsam, nesciunt, laudantium, commodi nemo est
-                reprehenderit ea quas aperiam numquam id deserunt. Nesciunt,
-                porro? Expedita dolore doloribus porro quaerat praesentium, amet
-                rem mollitia explicabo aspernatur?
               </div>
               {/* Logos */}
               {svgs.map((tech, index) => (
                 <div
                   key={index}
-                  className="h-[50%] w-[50%] col-span-1 row-span-1 bg-white rounded-3xl flex justify-center items-center"
+                  className="h-full w-full col-span-1 row-span-1 rounded-3xl flex justify-center items-center
+                  xl:h-[80%] xl:w-[80%]
+                  2xl:h-[60%] 2xl:w-[60%]
+                  sm:col-span-1 sm:row-span-2"
                 >
                   {tech.svg}
                 </div>
               ))}
             </div>
           </div>
-          <div className="col-span-1 row-span-3 bg-white rounded-3xl flex justify-center items-center">
-            {/* Software team container */}
-            <div className="grid grid-cols-1 grid-rows-2 h-full w-full">
+          <div className="col-span-1 row-span-3 rounded-3xl flex justify-center items-center">
+            {/* Software team info */}
+            <div
+              className={`grid grid-cols-1 grid-rows-${softwareTeam.length} h-full w-full`}
+            >
               {softwareTeam.map((_, index) => (
                 <div
                   key={index}
                   className="grid-cols-1 grid-rows-1 border-black border-[1px] flex justify-center items-center"
                 >
-                  <div className="h-full w-full grid grid-cols-1 grid-rows-3">
-                    <div className="w-full col-span-1 row-span-2 bg-indigo-200 flex justify-center items-center">
-                      On hover show information
+                  <div className="h-full w-full grid grid-cols-1 grid-rows-3 relative">
+                    <img
+                      src={photos[index]}
+                      className="desvanecer absolute object-cover h-full w-full"
+                      alt=""
+                    />
+                    <div
+                      className="col-span-1 row-span-2 flex justify-center items-center p-4 text-xl font-bold text-[14px]
+                    sm:text-[18px]"
+                    >
+                      {softwareTeam[index]}
                     </div>
-                    <div className="w-full h-full col-span-1 row-span-1 bg-indigo-300 flex justify-center items-center">
-                      On hover show social media
+                    <div
+                      className="col-span-1 row-span-1 flex justify-center items-center p-4 text-[10px]
+                    sm:text-[12px]"
+                    >
+                      Github, Instagram, X
                     </div>
                   </div>
                 </div>
               ))}
             </div>
           </div>
-          <div className="col-span- row-span- bg-white rounded-3xl flex justify-center items-center font-Bebas_Neue text-[50px]">
-            Hardware Team
+          <div className="rounded-3xl flex justify-center items-center font-Bebas_Neue">
+            <div className="grid grid-cols-1 grid-rows-2">
+              <div
+                className="col-span-1 row-span-1 flex justify-center items-center text-[20px]
+              xl:text-[40px]
+              lg:text-[34px]
+              md:text-[25px]
+              sm:text-[20px]"
+              >
+                Hardware Team
+              </div>
+              <div
+                className="col-span-1 row-span-1 flex justify-center items-center text-[24px]
+              xl:text-[50px]
+              lg:text-[36px]
+              md:text-[30px]
+              sm:text-[25px]"
+              >
+                <HiChevronDoubleDown />
+              </div>
+            </div>
           </div>
-          <div className="col-span-1 row-span-3 bg-white rounded-3xl flex justify-center items-center">
+          <div className="col-span-1 row-span-3 rounded-3xl flex justify-center items-center">
             {/* Hardware team info */}
-            <div className="grid grid-cols-1 grid-rows-3 h-full w-full">
+            <div
+              className={`grid grid-cols-1 grid-rows-${hardwareTeam.length} h-full w-full`}
+            >
               {hardwareTeam.map((_, index) => (
                 <div
                   key={index}
-                  className="col-span-1 row-span-1 border-black border-[1px] flex justify-center items-center"
+                  className="col-span-1 row-span-1 flex justify-center items-center"
                 >
-                  {index}'s photo
+                  <div className="h-full w-full grid grid-cols-1 grid-rows-3 relative">
+                    <img
+                      src={photos[index]}
+                      className="desvanecer absolute object-cover h-full w-full"
+                      alt=""
+                    />
+                    <div
+                      className="col-span-1 row-span-2 flex justify-center items-center p-4 text-xl font-bold text-[12px]
+                    md:text-[14px]
+                    sm:text-[12px]"
+                    >
+                      {hardwareTeam[index]}
+                    </div>
+                    <div
+                      className="col-span-1 row-span-1 flex justify-center items-center p-4 text-[10px]
+                    md:text-[12px]
+                    sm:text-[10px]"
+                    >
+                      Github, Instagram, X
+                    </div>
+                  </div>
                 </div>
               ))}
             </div>
           </div>
-          <div className="col-span-1 row-span-1 bg-white rounded-3xl flex justify-center items-center font-Bebas_Neue text-[50px]">
-            Software Team
+          <div className="col-span-1 row-span-1 rounded-3xl flex justify-center items-center font-Bebas_Neue">
+            <div className="grid grid-cols-1 grid-rows-2">
+              <div
+                className="col-span-1 row-span-1 flex justify-center items-center text-[24px]
+              xl:text=[50px]
+              lg:text-[36px]
+              md:text-[30px]
+              sm:text-[25px]"
+              >
+                <HiOutlineChevronDoubleUp />
+              </div>
+              <div
+                className="col-span-1 row-span-1 flex justify-center items-center text-[20px]
+              xl:text-[40px]
+              lg:text-[36px]
+              md:text-[26px]
+              sm:text-[20px]"
+              >
+                Software Team
+              </div>
+            </div>
           </div>
         </div>
       </div>
