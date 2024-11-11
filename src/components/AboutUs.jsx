@@ -1,8 +1,9 @@
 // React Icons
 import {
-  HiChevronDoubleUp,
   HiChevronDoubleDown,
   HiOutlineChevronDoubleUp,
+  HiChevronDoubleLeft,
+  HiChevronDoubleRight,
 } from "react-icons/hi";
 
 // SVG logos
@@ -14,6 +15,7 @@ import {
   ViteSVG,
   TailwindSVG,
 } from "../assets/Svg";
+import { FaAngleDoubleLeft, FaAngleDoubleRight } from "react-icons/fa";
 
 const svgs = [
   { name: "MongoDB", svg: MongoDBSVG },
@@ -34,13 +36,15 @@ const photos = [
   "https://images.pexels.com/photos/2387418/pexels-photo-2387418.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
 ];
 
-const AboutUs = () => {
+// Screens up to 640px
+const AboutUsSmToUp = () => {
   return (
-    <>
+    <div className="hidden sm:flex">
       <div className="flex h-screen w-full flex-col items-center justify-center p-6">
         <div className="flex h-[20%] flex-col items-center justify-center gap-4 text-center">
           <h2 className="text-[70px] font-bold">About us!</h2>
         </div>
+        {/* GRID */}
         <div className="grid grid-cols-5 grid-rows-4 gap-4 h-[80%] w-full">
           <div className="col-span-3 row-span-4 rounded-3xl flex justify-center items-center">
             {/* Info container */}
@@ -86,8 +90,8 @@ const AboutUs = () => {
               ))}
             </div>
           </div>
+          {/* Software team info */}
           <div className="col-span-1 row-span-3 rounded-3xl flex justify-center items-center">
-            {/* Software team info */}
             <div
               className={`grid grid-cols-1 grid-rows-${softwareTeam.length} h-full w-full`}
             >
@@ -119,6 +123,7 @@ const AboutUs = () => {
               ))}
             </div>
           </div>
+          {/* Hardware team label */}
           <div className="rounded-3xl flex justify-center items-center font-Bebas_Neue">
             <div className="grid grid-cols-1 grid-rows-2">
               <div
@@ -141,8 +146,8 @@ const AboutUs = () => {
               </div>
             </div>
           </div>
+          {/* Hardware team info */}
           <div className="col-span-1 row-span-3 rounded-3xl flex justify-center items-center">
-            {/* Hardware team info */}
             <div
               className={`grid grid-cols-1 grid-rows-${hardwareTeam.length} h-full w-full`}
             >
@@ -176,6 +181,7 @@ const AboutUs = () => {
               ))}
             </div>
           </div>
+          {/* Sotware team label */}
           <div className="col-span-1 row-span-1 rounded-3xl flex justify-center items-center font-Bebas_Neue">
             <div className="grid grid-cols-1 grid-rows-2">
               <div
@@ -188,7 +194,7 @@ const AboutUs = () => {
                 <HiOutlineChevronDoubleUp />
               </div>
               <div
-                className="col-span-1 row-span-1 flex justify-center items-center text-[20px]
+                className="sm:col-span-1 sm:row-span-1 flex justify-center items-center text-[20px]
               xl:text-[40px]
               lg:text-[36px]
               md:text-[26px]
@@ -200,6 +206,146 @@ const AboutUs = () => {
           </div>
         </div>
       </div>
+    </div>
+  );
+};
+
+// Mobile screens
+const AboutUsMobile = () => {
+  return (
+    <div className="sm:hidden">
+      <div className="w-full h-[100vh]">
+        <div className="w-full h-[20%] flex items-center justify-center">
+          <h2 className="font-bold text-[50px]">About Us</h2>
+        </div>
+        <div className="w-full h-[80%]">
+          <div className="w-full h-full grid grid-cols-6 grid-rows-6 gap-4 p-4">
+            {/* Title container */}
+            <div className="col-span-6 row-span-1 rounded-3xl flex justify-center items-center border-black border-[2px] border-dashed font-Edu_Australia">
+              <h2 className="text-[40px]">MongoDB</h2>
+            </div>
+            {/* Description container */}
+            <div className="col-span-6 row-span-2 rounded-3xl flex justify-center items-center text-justify border-black border-[1px] border-dashed p-4">
+              <p className="font-Source_Code">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. At id
+                expedita esse rerum labore reprehenderit ipsum inventore tenetur
+                doloribus repellendus earum eligendi, dolorum optio autem fugiat
+                ratione pariatur officiis modi.
+              </p>
+            </div>
+            {/* Logos */}
+            <div className="col-span-6 row-span-1 rounded-3xl">
+              <div className="h-full w-full grid grid-cols-6 grid-rows-1 gap-4 p-4">
+                {svgs.map((tech, index) => (
+                  <div
+                    key={index}
+                    className="h-[80%] w-[80%] col-span-1 row-span-1 rounded-3xl flex justify-center items-center"
+                  >
+                    {tech.svg}
+                  </div>
+                ))}
+              </div>
+            </div>
+            {/* Software team img */}
+            <div className="col-span-2 row-span-2 rounded-3xl flex justify-center items-center">
+              <div
+                className={`grid grid-cols-1 grid-rows-${softwareTeam.length} h-full w-full`}
+              >
+                {softwareTeam.map((_, index) => (
+                  <div
+                    key={index}
+                    className="grid-cols-1 grid-rows-1 border-black border-[1px] flex justify-center items-center"
+                  >
+                    <div className="h-full w-full grid grid-cols-1 grid-rows-3 relative">
+                      <img
+                        src={photos[index]}
+                        className="desvanecer absolute object-cover h-full w-full"
+                        alt=""
+                      />
+                      <div
+                        className="col-span-1 row-span-2 flex justify-center items-center p-4 text-xl font-bold text-[14px]
+                    sm:text-[18px]"
+                      >
+                        {softwareTeam[index]}
+                      </div>
+                      <div
+                        className="col-span-1 row-span-1 flex justify-center items-center p-4 text-[10px]
+                    sm:text-[12px]"
+                      >
+                        Github, Instagram, X
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+            {/* Software team label */}
+            <div className="col-span-2 row-span-1 rounded-3xl">
+              <div className="h-full w-full grid grid-cols-1 grid-rows-2">
+                <div className="h-full w-full col-span-1 row-span-1 flex justify-center items-center">
+                  <h2 className="font-Bebas_Neue text-2xl">Software team</h2>
+                </div>
+                <div className="h-full w-full col-span-1 row-span-2 flex justify-center items-center">
+                  <FaAngleDoubleLeft className="text-2xl" />
+                </div>
+              </div>
+            </div>
+            {/* Hardware team img */}
+            <div className="col-span-2 row-span-2 rounded-3xl flex justify-center items-center">
+              <div
+                className={`grid grid-cols-1 grid-rows-${hardwareTeam.length} h-full w-full`}
+              >
+                {hardwareTeam.map((_, index) => (
+                  <div
+                    key={index}
+                    className="grid-cols-1 grid-rows-1 border-black border-[1px] flex justify-center items-center"
+                  >
+                    <div className="h-full w-full grid grid-cols-1 grid-rows-3 relative">
+                      <img
+                        src={photos[index]}
+                        className="desvanecer absolute object-cover h-full w-full"
+                        alt=""
+                      />
+                      <div
+                        className="col-span-1 row-span-2 flex justify-center items-center p-4 text-xl font-bold text-[12px]
+                    sm:text-[18px]"
+                      >
+                        {hardwareTeam[index]}
+                      </div>
+                      <div
+                        className="col-span-1 row-span-1 flex justify-center items-center p-4 text-[8px]
+                    sm:text-[12px]"
+                      >
+                        Github, Instagram, X
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+            {/* Hardware team label */}
+            <div className="col-span-2 row-span-1 rounded-3xl">
+              <div className="h-full w-full grid grid-cols-1 grid-rows-2">
+                <div className="h-full w-full col-span-1 row-span-1 flex justify-center items-center">
+                  <h2 className="font-Bebas_Neue text-[22px]">Hardware team</h2>
+                </div>
+                <div className="h-full w-full col-span-1 row-span-2 flex justify-center items-center">
+                  <FaAngleDoubleRight className="text-2xl" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const AboutUs = () => {
+  return (
+    <>
+      <AboutUsSmToUp />
+      <AboutUsMobile />
     </>
   );
 };
