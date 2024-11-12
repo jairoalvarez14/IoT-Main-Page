@@ -17,7 +17,7 @@ createRoot(document.getElementById("root")).render(
     <Welcome />
     <Gallery />
     <Farms />
-    <AboutUs />
+    <AboutUs className="hidden" />
 
     {/* <Footer /> */}
   </StrictMode>
