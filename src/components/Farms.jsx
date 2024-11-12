@@ -1,36 +1,57 @@
+const farms = [
+  { id: "1", name: "Farm 1", link: "", img: "'https://www.securities.io/wp-content/uploads/2023/11/Aeroponics.png'" },
+  { id: "2", name: "Farm 2", link: "", img: "'https://agrotonomy.com/wp-content/uploads/2018/03/aeroponic-tower-farm.jpg'" },
+
+];
+
 const Board = ({ farms }) => {
   return (
-    <section className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+    //grid-cols-[repeat(auto-fit, repeat(300px, 1fr))] this is the best way
+    <div className="farm h-5/6 p-5">
       {farms.map((farm, index) => {
-        return <DisplayedFarm key={index}>{farm.id}</DisplayedFarm>;
+        return <DisplayedFarm key={index} img={farm.img}>{farm.name}</DisplayedFarm>;
       })}
-    </section>
+    </div>
   );
 };
 
-const DisplayedFarm = ({ children, index }) => {
+const DisplayedFarm = ({ children, img }) => {
+
+  const farmClick = () =>{
+
+  }  
   return (
-    <div className="bg-blue-200 p-6 rounded-lg text-center text-3xl min-w-[200px] max-w-[300px] w-full cursor-pointer">
+    <div
+      onClick={farmClick}
+      className={`flex bg-cover p-6 rounded-2xl justify-center items-center text-3xl shadow-md shadow-black font-bold cursor-pointer min-h-[12vw] hover:bg-black/60 transition-all duration-300 hover:scale-105`}
+    // style={{backgroundImage: `url(${img}`}}
+    >
       {children}
     </div>
   );
 }; //TODO I need to complete this before sunday
 
 const Farms = () => {
-  const farms = [
-    { id: "1", name: "Farm 1", link: "" },
-    { id: "2", name: "Farm 2", link: "" },
-    { id: "3", name: "Farm 3", link: "" },
-    { id: "4", name: "Farm 4", link: "" },
-  ];
   return (
-    <section className="flex flex-col items-center max-w-full h-screen bg-radial-custom" id="farms">
-      <header className="w-full text-center  bg-red-400">
+    <section className="flex flex-col items-center max-w-full min-h-screen bg-radial-custom" id="farms">
+      <header className="w-full text-center ">
         <h1 className="text-[100px] font-bold">Farms</h1>
       </header>
 
-      <div className="flex justify-center h-full overflow-y-auto m-14 w-5/6 p-6 bg-white/50 brightness-60 backdrop-blur-sm rounded-3xl">
-        <Board farms={farms}></Board> 
+      <div className="flex flex-col justify-center h-full w-11/12 p-10 m-14 bg-white/50 brightness-60 backdrop-blur-sm rounded-3xl">
+        <Board farms={farms}></Board>
+      </div>
+      <div className="m-8">
+        <p className="text-[3vh] text-justify">The Farms section presents a curated list of farms
+          in a responsive grid layout, allowing users to easily
+          browse through the available farms. Each farm is displayed
+          with a simple, clean design that highlights its name, ensuring
+          a clear and accessible presentation. The grid dynamically adjusts
+          to different screen sizes, ensuring the layout remains balanced
+          and visually appealing whether there are just a few farms or
+          a larger selection. The responsive design ensures that the
+          content is always displayed optimally, providing a seamless
+          browsing experience.</p>
       </div>
     </section>
   );

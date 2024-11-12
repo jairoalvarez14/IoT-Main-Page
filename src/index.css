@@ -10,6 +10,22 @@ body {
   background: #eaeaea;
 }
 
+
+
+
+
+
+
+
+
 html{
   scroll-behavior: smooth;
+}
+
+.farm{
+  display: grid;
+  gap: 4rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  justify-content: center;
+  overflow: auto;
 }
