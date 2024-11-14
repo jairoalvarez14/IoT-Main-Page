@@ -9,12 +9,16 @@ import Gallery from "./components/Gallery.jsx";
 import Farms from "./components/Farms.jsx";
 import AboutUs from "./components/AboutUs.jsx";
 
+// Testing
+import InfoMainPage from "./components/InfoMainPage.jsx";
+
 import Footer from "./components/Footer.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <Header />
     <Welcome />
+    <InfoMainPage />
     <Gallery />
     <Farms />
     <AboutUs className="hidden" />
