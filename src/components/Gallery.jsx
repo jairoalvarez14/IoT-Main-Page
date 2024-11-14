@@ -51,7 +51,7 @@ const Gallery = () => {
               </button>
             </div>
 
-            <div className="w-full flex justify-center absolute space-x-2 -bottom-[110vh] sm:-bottom-[100vh] my-4">
+            <div className="w-full h-full flex justify-center items-end absolute mb-[50px] space-x-2 my-4">
               {imageUrls.map((_, index) => (
                 <FaCircle
                   key={index}

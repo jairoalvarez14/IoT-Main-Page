@@ -11,6 +11,8 @@ export default {
       Edu_Australia: ["Edu AU VIC WA NT Pre", "sans-serif"],
       Bebas_Neue: ["Bebas Neue", "sans-serif"],
       Source_Code: ["Source Code Pro", "sans-serif"],
+      Poppins: ["Poppins", "sans-serif"],
+      Yellowtail: ["Yellowtail"],
     },
   },
   plugins: [],
