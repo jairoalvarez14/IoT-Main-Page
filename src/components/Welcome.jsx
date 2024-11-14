@@ -27,7 +27,7 @@ const Welcome = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentInfo((prevIndex) => (prevIndex + 1) % info.length);
-    }, 5000);
+    }, 10000);
 
     return () => clearInterval(interval);
   }, [info.length]);
@@ -39,11 +39,11 @@ const Welcome = () => {
         className="max-w-full h-[100vh] flex bg-cover bg-center"
       >
         <div className="h-full w-full flex justify-center items-center backdrop-blur-sm bg-black/30">
-          <div className="max-w-[1200px] w-full">
-            <h1 className="text-[200px] text-[#f9f7f3] font-Yellowtail">
+          <div className="max-w-[1200px] w-full p-10">
+            <h1 className="text-[110px] sm:text-[150px] md:text-[200px] text-[#f9f7f3] font-Yellowtail">
               {info[currentInfo].title}
             </h1>
-            <p className="text-[#f9f7f3] text-[12px] text-justify font-Poppins">
+            <p className="text-[#f9f7f3] text-[12px] text-justify font-Merriweather">
               {info[currentInfo].description}
             </p>
           </div>
