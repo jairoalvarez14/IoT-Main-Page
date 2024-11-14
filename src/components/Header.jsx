@@ -3,13 +3,13 @@ import { useEffect } from "react";
 const Header = () => {
   const navLinks = [
     {
-      display: "Gallery",
+      display: "Gallery", ref: "#gallery"
     },
     {
-      display: "Farms",
+      display: "Farms", ref: "#farms"
     },
     {
-      display: "About Us",
+      display: "About Us", ref: "#about"
     },
   ];
 
@@ -40,7 +40,7 @@ const Header = () => {
         <ul className="m-0 p-0 flex">
           {navLinks.map((link) => (
             <li key={link.display} className="cursor-pointer font-medium px-4">
-              {link.display}
+              <a href={link.ref}>{link.display}</a>
             </li>
           ))}
         </ul>

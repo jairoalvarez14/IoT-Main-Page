@@ -36,7 +36,7 @@ const Gallery = () => {
 
   return (
     <>
-      <section className="max-w-[100%] h-[100vh] flex bg-slate-600">
+      <section className="max-w-[100%] h-[100vh] flex bg-slate-600" id="gallery">
         <div className="flex w-[100%] h-[100%]">
           <div
             className="bg-slate-100 h-[100%] w-[100%] flex justify-center items-center bg-center bg-cover"

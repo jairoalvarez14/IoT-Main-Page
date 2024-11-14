@@ -40,7 +40,7 @@ const photos = [
 const AboutUsSmToUp = () => {
   return (
     <div className="hidden sm:flex">
-      <div className="flex h-screen w-full flex-col items-center justify-center p-6">
+      <div className="flex h-screen w-full flex-col items-center justify-center p-6" id="about">
         <div className="flex h-[20%] flex-col items-center justify-center gap-4 text-center">
           <h2 className="text-[70px] font-bold">About us!</h2>
         </div>
