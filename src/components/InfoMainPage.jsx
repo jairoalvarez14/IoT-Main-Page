@@ -7,7 +7,7 @@ const InfoMainPage = () => {
     <>
       <div className="w-full h-[100vh] bg-[#f9f7f3]">
         <div className="w-full h-full flex items-center justify-center p-[50px]">
-          <div className="flex max-w-[1200px] justify-self-center items-center">
+          <div className="flex max-w-[1200px] justify-center items-center">
             <div className="max-w-[600px] w-full relative">
               <h2 className="font-Yellowtail text-[50px] text-[#255f12] absolute top-[-25px] left-[-20px]">
                 Nosotros...
