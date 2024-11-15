@@ -83,7 +83,10 @@ const teamMembers = [
 const AboutUsSmToUp = () => {
   return (
     <div className="hidden sm:flex">
-      <div className="flex h-screen w-full flex-col items-center justify-center p-6" id="about">
+      <div
+        className="flex h-screen w-full flex-col items-center justify-center p-6"
+        id="about"
+      >
         <div className="flex h-[20%] flex-col items-center justify-center gap-4 text-center">
           <h2 className="text-[70px] font-bold">About us!</h2>
         </div>
@@ -387,7 +390,7 @@ const AboutUsMobile = () => {
 const NewAboutUs = () => {
   return (
     <>
-      <div className="w-full h-full bg-[#0b1215]">
+      <div className="w-full h-full bg-[#0b1215]" id="about">
         <div className="flex flex-wrap flex-col">
           <h2 className="font-Merriweather text-[40px] sm:text-[60px] md:text-[75px] text-[#f9f7f3] m-[100px_0_100px_50px] sm:m-[100px_0px_100px_50px] md:m-[100px_0px_100px_100px]">
             Our{" "}

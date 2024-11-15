@@ -3,6 +3,13 @@ import { HiArrowLongDown } from "react-icons/hi2";
 import React from "react";
 
 const InfoMainPage = () => {
+  const linkGallery = [
+    {
+      display: <HiArrowLongDown />,
+      ref: "#gallery",
+    },
+  ];
+
   return (
     <>
       <div className="w-full h-full py-[100px] bg-[#f9f7f3]">
@@ -44,8 +51,14 @@ const InfoMainPage = () => {
               </p>
             </div>
             <div className="w-full h-full hidden md:flex justify-end items-end mt-[360px] absolute">
-              <button className="flex justify-center items-center py-6 px-4 bg-[#255f12] text-[#f9f7f3] font-Poppins text-[30px] rounded-xl">
-                <HiArrowLongDown />
+              <button className="flex justify-center items-center py-6 px-4 bg-[#255f12] text-[#f9f7f3] font-Poppins rounded-xl">
+                {linkGallery.map((link, index) => (
+                  <li key={index} className="list-none">
+                    <a href={link.ref}>
+                      <HiArrowLongDown className="text-[30px] cursor-pointer" />
+                    </a>
+                  </li>
+                ))}
               </button>
             </div>
           </div>
