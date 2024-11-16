@@ -7,6 +7,7 @@ import Header from "./components/Header.jsx";
 import Welcome from "./components/Welcome.jsx";
 import Gallery from "./components/Gallery.jsx";
 import Farms from "./components/Farms.jsx";
+import HowPlantsGrow from "./components/HowPlantsGrow.jsx";
 import AboutUs from "./components/AboutUs.jsx";
 
 // Testing
@@ -21,6 +22,7 @@ createRoot(document.getElementById("root")).render(
     <InfoMainPage />
     <Gallery />
     <Farms />
+    <HowPlantsGrow />
     <AboutUs className="hidden" />
 
     {/* <Footer /> */}
