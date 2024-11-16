@@ -26,21 +26,67 @@ const svgs = [
   { name: "TailwindCSS", svg: TailwindSVG },
 ];
 
-const softwareTeam = ["Jairo Álvarez", "Héctor Torres"];
-const hardwareTeam = ["Erany Fon Bon", "Josué Morales", "Oziel Venegas"];
-
-const photos = [
-  "https://images.pexels.com/photos/335464/pexels-photo-335464.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-  "https://images.pexels.com/photos/2387418/pexels-photo-2387418.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-  "https://images.pexels.com/photos/335464/pexels-photo-335464.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-  "https://images.pexels.com/photos/2387418/pexels-photo-2387418.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+const teamMembers = [
+  {
+    img: "https://images.pexels.com/photos/335464/pexels-photo-335464.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    name: "Jairo Alvarez",
+    occupation: "Software",
+    socialMedia: {
+      instagram: "",
+      github: "",
+      x: "",
+    },
+  },
+  {
+    img: "https://images.pexels.com/photos/2387418/pexels-photo-2387418.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    name: "Hector Torres",
+    occupation: "Software",
+    socialMedia: {
+      instagram: "",
+      github: "",
+      x: "",
+    },
+  },
+  {
+    img: "https://images.pexels.com/photos/335464/pexels-photo-335464.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    name: "Erany Fon Bon",
+    occupation: "Hardware",
+    socialMedia: {
+      instagram: "",
+      github: "",
+      x: "",
+    },
+  },
+  {
+    img: "https://images.pexels.com/photos/2387418/pexels-photo-2387418.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    name: "Josue Morales",
+    occupation: "Hardware",
+    socialMedia: {
+      instagram: "",
+      github: "",
+      x: "",
+    },
+  },
+  {
+    img: "https://images.pexels.com/photos/335464/pexels-photo-335464.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    name: "Oziel Venegas",
+    occupation: "Hardware",
+    socialMedia: {
+      instagram: "",
+      github: "",
+      x: "",
+    },
+  },
 ];
 
 // Screens up to 640px
 const AboutUsSmToUp = () => {
   return (
     <div className="hidden sm:flex">
-      <div className="flex h-screen w-full flex-col items-center justify-center p-6" id="about">
+      <div
+        className="flex h-screen w-full flex-col items-center justify-center p-6"
+        id="about"
+      >
         <div className="flex h-[20%] flex-col items-center justify-center gap-4 text-center">
           <h2 className="text-[70px] font-bold">About us!</h2>
         </div>
@@ -341,11 +387,58 @@ const AboutUsMobile = () => {
   );
 };
 
+const NewAboutUs = () => {
+  return (
+    <>
+      <div className="w-full h-full bg-[#0b1215]" id="about">
+        <div className="flex flex-wrap flex-col">
+          <h2 className="font-Merriweather text-[40px] sm:text-[60px] md:text-[75px] text-[#f9f7f3] m-[100px_0_100px_50px] sm:m-[100px_0px_100px_50px] md:m-[100px_0px_100px_100px]">
+            Our{" "}
+            <p className="text-[#2d6b19] font-Yellowtail text-[50px] sm:text-[80px] md:text-[90px] lg:text-[100px] inline-block">
+              team
+            </p>{" "}
+            members
+          </h2>
+        </div>
+
+        {/* Cards */}
+        <div className="flex flex-wrap gap-4 justify-center w-full">
+          {teamMembers.map(({ img, name, occupation, socialMedia }, index) => (
+            <div
+              key={index}
+              className="flex flex-col items-center w-[300px] rounded-lg"
+            >
+              <div className="w-full h-[400px]">
+                <img
+                  src={teamMembers[index].img}
+                  alt={`Foto de ${(teamMembers[index], name)}`}
+                  className="object-cover w-full h-full rounded-lg"
+                />
+              </div>
+              <div className="text-center mt-4 text-2xl font-bold text-[#f9f7f3]">
+                {teamMembers[index].name}
+              </div>
+              <div className="text-center mt-4 text-xl font-bold text-[#c3c1bd]">
+                {teamMembers[index].occupation}
+              </div>
+              <div className="flex justify-center gap-4 mt-2 text-md text-[#9c9c9c]">
+                Social Media
+              </div>
+            </div>
+          ))}
+        </div>
+        <div className="w-full h-[200px]"></div>
+      </div>
+    </>
+  );
+};
+
 const AboutUs = () => {
   return (
     <>
-      <AboutUsSmToUp />
-      <AboutUsMobile />
+      {/* <AboutUsSmToUp />
+      <AboutUsMobile /> */}
+      <NewAboutUs />
     </>
   );
 };
