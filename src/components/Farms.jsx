@@ -29,8 +29,8 @@ const DisplayedFarm = ({ children, img }) => {
     <>
       <div
         className={`flex bg-cover p-6 rounded-2xl justify-center items-center text-3xl 
-          shadow-md shadow-black font-bold cursor-pointer min-h-[12vw] hover:bg-black/60 
-          transition-all duration-300 hover:scale-105`}
+          shadow-md shadow-black font-bold cursor-pointer min-h-[12vw]
+          transition-all duration-300 hover:scale-105 bg-slate-500`}
         // Setting background image dynamically for each farm
         onClick={togglePopup}
         style={{ backgroundImage: `url(${img}` }}
