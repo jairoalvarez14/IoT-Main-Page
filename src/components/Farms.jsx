@@ -48,7 +48,8 @@ const Farms = () => {
         <h1 className="text-[100px] font-bold">Farms</h1>
       </header>
 
-      {/* Main content area with backdrop styling */}
+    {/* Main content area with backdrop styling */}
+    
       <div className="flex flex-col justify-center h-full w-11/12 p-10 m-14 bg-white/50 brightness-60 backdrop-blur-sm rounded-3xl">
         <Board farms={farms}></Board>
         
