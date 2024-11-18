@@ -10,13 +10,13 @@ const HowPlantsGrow = () => {
         style={{ backgroundImage: `url(${AeroponiaBG})` }}
       >
         <div className="w-full h-full flex items-center justify-center">
-          <div className="max-w-[1200px] w-full relative">
+          <div className="max-w-[1200px] w-full relative px-10">
             {/* Title */}
             <div className="flex">
-              <h2 className="text-[50px] font-Yellowtail absolute left-[40px]">
+              <h2 className="font-Yellowtail absolute text-[30px] left-[70px] sm:text-[50px] sm:left-[80px]">
                 How we grow plants?
               </h2>
-              <h2 className="text-[100px] font-Poppins">
+              <h2 className="text-[60px] sm:text-[100px] font-Poppins">
                 <span className="bg-gradient-to-r from-[#2f84ae] to-[#62b2da] bg-clip-text text-transparent">
                   Aeroponía
                 </span>

@@ -3,32 +3,34 @@ import { Link } from "react-router-dom";
 import aeroponiaExample from "../assets/img/aeroponiaExample.jpg";
 import aeroponiaExample2 from "../assets/img/aeroponiaExample2.png";
 import HowPlantsGrowBG1 from "../assets/img/HowPlantsGrowBG1.png";
-import HowPlantsGrowBG2 from "../assets/img/HowPlantsGrowBG2.png";
+
+import Header from "./Header.jsx";
 
 const InfoHowPlantsGrow = () => {
   return (
     <>
+      <Header />
       <div className="w-full h-full">
         <div
           className="w-full h-full flex justify-center items-center"
           style={{ backgroundImage: `url(${HowPlantsGrowBG1})` }}
         >
-          <div className="max-w-[1200px] w-full relative pb-[100px]">
+          <div className="max-w-[1200px] w-full relative p-[80px_0_100px_0]">
             {/* Title */}
-            <div>
-              <h2 className="text-[100px] font-Poppins">
+            <div className="flex px-10">
+              <h2 className="text-[60px] sm:text-[80px] lg:text-[100px] font-Poppins">
                 <span className="bg-gradient-to-r from-[#2f84ae] to-[#62b2da] bg-clip-text text-transparent">
                   Aeroponía
                 </span>
               </h2>
-              <h2 className="text-[70px] font-Yellowtail absolute right-[580px] top-[70px]">
-                ¿Qué es?
+              <h2 className="text-[40px] lg:text-[50px] font-Yellowtail absolute left-[260px] top-[120px] sm:left-[340px] sm:top-[140px] lg:left-[440px] lg:top-[160px]">
+                ¿Que es?
               </h2>
             </div>
             {/* Info container */}
-            <div className="flex pt-[100px] gap-8 text-justify w-full">
+            <div className="lg:flex pt-[100px] lg:gap-8 text-justify w-full px-10">
               {/* Left info container */}
-              <div className="w-[50%]">
+              <div className="lg:w-[50%]">
                 {/* Aeroponia meaning */}
                 <p>
                   Las plantas reciben los nutrientes por una disolución a base
@@ -41,7 +43,7 @@ const InfoHowPlantsGrow = () => {
                   agricultura sostenible y de alta tecnología.
                 </p>
                 {/* Funcionamineto */}
-                <h3 className="py-6 font-Poppins text-[50px]">
+                <h3 className="py-6 font-Poppins text-[40px] sm:text-[50px]">
                   Funcionamiento
                 </h3>
                 <ul className="list-inside list-disc">
@@ -95,8 +97,9 @@ const InfoHowPlantsGrow = () => {
                 {/* Aeroponia example 2 */}
                 <img src={aeroponiaExample2} alt="" />
               </div>
+              <br />
               {/* Right info container */}
-              <div className="w-[50%]">
+              <div className="lg:w-[50%]">
                 {/* First img */}
                 <div>
                   <img
