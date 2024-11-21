@@ -3,13 +3,21 @@ import PopupFarm from "./PopupFarm";
 
 // Component that renders a board of farms
 const Board = ({ farms }) => {
+  // Event handler for click events on farm elements TODO
   return (
     // Container for farm display grid with responsive layout
-    <div className="farm h-5/6 p-5">
+    <div className="farm h-5/6 p-5" id="hola">
       {/* Maps over each farm and renders a DisplayedFarm component */}
       {farms.map((farm, index) => {
+
+        const togglePopup = () => {
+         // window.alert('hey - penelop') just to test if this functions works properly
+          document.getElementById(`popup-farm`).classList.toggle("active");
+          document.getElementById(`popup-${farm.id}`).classList.toggle("active");
+        };
+
         return (
-          <DisplayedFarm key={index} img={farm.img}>
+          <DisplayedFarm key={index} img={farm.img} togglePopup={togglePopup}>
             {farm.name}
           </DisplayedFarm>
         );
@@ -19,11 +27,7 @@ const Board = ({ farms }) => {
 };
 
 // Component to display each farm with styling and click event
-const DisplayedFarm = ({ children, img }) => {
-  // Event handler for click events on farm elements TODO
-  const togglePopup = () => {
-    document.getElementById("popup-1").classList.toggle("active");
-  };
+const DisplayedFarm = ({ children, img, togglePopup }) => {
 
   return (
     <>
@@ -73,8 +77,8 @@ const Farms = () => {
         </p>
       </div>
       <div className="w-full h-full text-center font-bold">
-        <PopupFarm></PopupFarm>
-      </div>{" "}
+        <PopupFarm farms={farms}></PopupFarm>
+      </div>
       {/*TODO*/}
     </section>
   );

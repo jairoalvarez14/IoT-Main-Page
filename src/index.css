@@ -42,8 +42,6 @@ html {
   overflow: auto;
 }
 
-
-
 .popup.active .overlay {
   opacity: 1;
   position: absolute;
