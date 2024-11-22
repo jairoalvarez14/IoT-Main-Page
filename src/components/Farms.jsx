@@ -12,8 +12,7 @@ const Board = ({ farms }) => {
 
         const togglePopup = () => {
          // window.alert('hey - penelop') just to test if this functions works properly
-          document.getElementById(`popup-farm`).classList.toggle("active");
-          document.getElementById(`popup-${farm.id}`).classList.toggle("active");
+          document.getElementById(`popup-farm-${farm.id}`).classList.toggle("active");
         };
 
         return (
