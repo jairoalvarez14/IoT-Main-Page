@@ -1,0 +1,65 @@
+/* FONTS */
+/* Edu Australian, Bebas Neue, Source Code Pro */
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap");
+
+/* Poppins, Yellowtail */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Yellowtail&display=swap");
+
+/* Merriweather */
+@import url("https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+
+/* Host Roboto */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background: #eaeaea;
+}
+.desvanecer:hover {
+  opacity: 0.2;
+  -webkit-transition: opacity 500ms;
+  -moz-transition: opacity 500ms;
+  -o-transition: opacity 500ms;
+  -ms-transition: opacity 500ms;
+  transition: opacity 500ms;
+}
+
+.poppins-regular {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.farm {
+  display: grid;
+  gap: 4rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  justify-content: center;
+  overflow: auto;
+}
+
+.popup.active .overlay {
+  opacity: 1;
+  position: absolute;
+  transition: all 300ms ease-in-out;
+  pointer-events: auto;
+  
+}
+.popup .content{
+  transform: translate(-50%, -50%) scale(0.8);
+  transition: opacity 300ms ease-in-out, transform 300ms ease-in-out;
+}
+
+.popup.active .content{
+  opacity: 1;
+  transition: all 300ms ease-in-out;
+  transform: translate(-50%, -50%) scale(1);
+  pointer-events: auto;
+}
